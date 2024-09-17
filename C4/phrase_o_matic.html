@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phrase-o-matic</title>
 </head>
+<script>
+    function makePhrases() {
+        var word1 = ["24/7", "multi-tier", "30,000 foot", "B-to-B", "win-win"];
+        var word2 = ["empowered", "value-added", "oriented", "focused", "aligned"];
+        var word3 = ["process", "solution", "tipping-point", "strategy", "vision"];
+
+        var rand1 = Math.floor(Math.random() * words1.length);
+        var rand2 = Math.floor(Math.random() * words2.length);
+        var rand3 = Math.floor(Math.random() * words3.length);
+
+        var phrase = words1[rand1] + " " + words2[rand2] + " " + words3[rand3];
+        alert (phrase);
+    }
+    makePhrases();
+</script>
 <body>
     
 </body>
