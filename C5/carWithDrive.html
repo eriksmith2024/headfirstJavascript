@@ -15,27 +15,30 @@
         mileage: 88000,
         started: false,
         start: function() {
-            started = true;
+            this.started = true;
+            alert("The car has started");
         },
         stop: function() {
-            started = false;
+            this.started = false;
+            alert("The car has stopped");
         },
         drive: function() {
-            if (started) {
-            alert("zoom zoom");
-        } else {
-            alert("You need to start the engine first");
+            if (this.started) {
+                alert("zoom zoom");
+            } else {
+                alert("You need to start the engine first");
             }
         }
     };
 
-    fiat.drive();
-    fiat.start();
-    fiat.drive();
-    fiat.stop();
-    fiat.drive();
-    fiat.start();
-    fiat.drive();
+    // Correct method calls to see the alerts properly
+    fiat.drive(); // Will alert "You need to start the engine first"
+    fiat.start(); // Alerts "The car has started"
+    fiat.drive(); // Alerts "zoom zoom"
+    fiat.stop();  // Alerts "The car has stopped"
+    fiat.drive(); // Alerts "You need to start the engine first"
+    fiat.start(); // Alerts "The car has started"
+    fiat.drive(); // Alerts "zoom zoom"
      
     </script>
 </head>
