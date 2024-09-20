@@ -12,7 +12,13 @@
         color: "Medium Blue",
         passengers: 2,
         convertible: false,
-        mileage: 88000
+        mileage: 88000,
+        drive: function() {
+            alert("zoom zoom");
+        },
+        handbrake: function() {
+            alert("screech");
+        }
     };
     console.log (fiat);
 
@@ -76,6 +82,10 @@
     isWorthALook(prequal(chevy), chevy);
     isWorthALook(prequal(cadi), cadi);
     isWorthALook(prequal(fiat), fiat);
+
+    fiat.drive();
+    fiat.handbrake();
+
 </script>
 </head>
 
