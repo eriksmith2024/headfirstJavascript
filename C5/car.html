@@ -14,9 +14,7 @@
         convertible: false,
         mileage: 88000
     };
-
     console.log (fiat);
-
 
     var taxi = {
         make: "Webville Motors",
@@ -27,6 +25,8 @@
         convertible: false,
         mileage: 281341
     };
+    console.log (taxi);
+    
     var cadi = {
         make: "GM",
         model: "Cadillac",
@@ -36,9 +36,21 @@
         convertible: false,
         mileage: 12892
     };
+    console.log (cadi);
+
+    var chevy = {
+        make: "Chevolet",
+        model: "Bel Air",
+        year: 1957,
+        color: "red",
+        passengers: 2,
+        convertible: false,
+        mileage: 1021
+    };
+    console.log (chevy);
 
     function prequal (car) {
-        if (car.mileage < 10000){
+        if (car.mileage > 10000){
             return false;
         } else if (car.year > 1960) {
             return false;
@@ -53,13 +65,21 @@
         console.log("You should really pass on the " + taxi.make + " " + taxi.model);
     }
 
-
-
-
-
-
-    </script>
+    function isWorthALook(didQualify, car) {
+	if (didQualify) {
+		console.log("You gotta check out this " + car.make + " " + car.model);
+	} else {
+    	console.log("You should really pass on the " + car.make + " " + car.model);
+	}
+    }
+    isWorthALook(prequal(taxi), taxi);
+    isWorthALook(prequal(chevy), chevy);
+    isWorthALook(prequal(cadi), cadi);
+    isWorthALook(prequal(fiat), fiat);
+</script>
 </head>
+
+
 <body>
     
 
