@@ -36,6 +36,19 @@
         if (fact.substring(10, 15) === "prime") {
             alert (fact);
         }
+
+        function Duck(sound) {
+            this.sound = sound;
+            this.quack =  function() {console.log(this.sound);}
+        }
+
+        var toy = new Duck("quak quack");
+
+        toy.quack();
+
+        console.log(typeof toy);
+        console.log(toy instanceof Duck);
+        
     </script>
 </head>
 <body>
