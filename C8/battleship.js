@@ -1,3 +1,29 @@
+
+var view = {
+    displaymessage: function(msg) {
+        var messageArea = document.getElementById("messageArea");
+        messageArea.innerHTML = msg;
+    },
+    displayHit: function(location) {
+        var cell = document.getElementById(location);
+        cell.setAttribute("class", hit);
+    },
+    displayMiss: function(location) {
+        var cell = document.getElementById(location);
+        cell.setAttribute("class", "miss");
+    }
+};
+
+view.displayMiss("00");
+view.displayHit("34");
+view.displayMiss("55");
+view.displayHit("12");
+view.displayMiss("25");
+view.displayHit("26");
+
+view.displaymessage("Tap tap us this thing on");
+
+
 var model = {
     boardSize:7,
     numShips: 3,
@@ -38,27 +64,25 @@ fire: function(guess) {
     }
 };
 
+function parseGuess(guess) {
+	var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
 
-var view = {
-    displaymessage: function(msg) {
-        var messageArea = document.getElementById("messageArea");
-        messageArea.innerHTML = msg;
-    },
-    displayHit: function(location) {
-        var cell = document.getElementById(location);
-        cell.setAttribute("class", hit);
-    },
-    displayMiss: function(location) {
-        var cell = document.getElementById(location);
-        cell.setAttribute("class", "miss");
-    }
-};
+	if (guess === null || guess.length !== 2) {
+		alert("Oops, please enter a letter and a number on the board.");
+	} else {
+		var firstChar = guess.charAt(0);
+		var row = alphabet.indexOf(firstChar);
+		var column = guess.charAt(1);
+		
+		if (isNaN(row) || isNaN(column)) {
+			alert("Oops, that isn't on the board.");
+		} else if (row < 0 || row >= model.boardSize ||
+		           column < 0 || column >= model.boardSize) {
+			alert("Oops, that's off the board!");
+		} else {
+			return row + column;
+		}
+	}
+	return null;
+}
 
-view.displayMiss("00");
-view.displayHit("34");
-view.displayMiss("55");
-view.displayHit("12");
-view.displayMiss("25");
-view.displayHit("26");
-
-view.displaymessage("Tap tap us this thing on");
