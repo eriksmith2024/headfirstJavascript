@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shellgame</title>
+    <script>
+        var winner = function() {alert("Winner")};
+        var loser = function() {alert("loser")};
+        // lests test as a warm up
+        winner();
+        // lets assign to other variables for practice
+        var a = winner;
+        var b = loser;
+        var c = loser;
+        a();
+        b();
+        // now lets try your luck with a shell game
+        c = a;
+        a = b;
+        b = c;
+        c = a;
+        a = c;
+        a = b;
+        b = c;
+        a();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
