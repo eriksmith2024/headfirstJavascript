@@ -7,7 +7,7 @@
     <script>
         var passengers = [  { name: "Jane Doloop", paid: true, ticket: "coach" },
                             { name: "Dr. Evel", paid: true, ticket: "firstclass" },
-                            { name: "Sue property", paid: false, ticket: "firstclass"},
+                            { name: "Sue Property", paid: false, ticket: "firstclass"},
                             { name: "John Funcall", paid: true, ticket: "coach" } ];
 
         function processPassengers( passengers, testFunction) {
@@ -84,15 +84,11 @@
             }
 
             function servePassengers(passengers) {
-                for (var i = 0; i < passenger.length; i++) {
-                    serveCustomer(passenger[i]);
+                for (var i = 0; i < passengers.length; i++) {
+                    serveCustomer(passengers[i]);
                 }
             }
             servePassengers(passengers);
-         
-            
-        
-
 
     </script>
 </head>
