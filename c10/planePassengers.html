@@ -52,6 +52,41 @@
         processPassengers(passengers, printPassenger);
 
 
+        function createDrinkOrder(passenger) {
+            var orderFunction;
+            if(passenger.ticket === "firstclass") {
+                orderFunction = function () {
+                    alert ("Would you like a cocktail or wine?")
+                };
+            } else {
+                orderFunction = function () {
+                    alert("Your choice is cola or water.");
+                }
+               
+            }
+            return orderFunction;
+
+            }
+
+            function serveCustomer(passenger) {
+                var getDrinkOrderFunction =  createDrinkOrder(passenger);
+                getDrinkOrderFunction();
+
+            // get dinner order
+            getDrinkOrderFunction();
+            getDrinkOrderFunction();
+
+            // show movie
+            getDrinkOrderFunction();
+            
+            // pick up trash
+
+            }
+         
+            
+        
+
+
     </script>
 </head>
 <body>
