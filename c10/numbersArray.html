@@ -6,13 +6,13 @@
     <title>Numbers Array Sort</title>
     <Script>
         var numbersArray =[60, 50, 62, 58, 54, 54];
-        numbersArray.sort(compareNumbersDesc);
+        numbersArray.sort(compareNumberDesc);
         console.log(numbersArray);
 
         function compareNumberDesc(num1, num2) {
             if (num1 > num2) {
                 return 1;
-            } else if (num === num2) {
+            } else if (num1 === num2) {
                 return 0;
             } else {
                 return -1;
