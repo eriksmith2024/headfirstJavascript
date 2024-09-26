@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passengers</title>
+    <script>
+        var passengers = [  { name: "Jane Doloop", paid: true },
+                            { name: "Dr. Evel", paid: true },
+                            { name: "Sue property", paid: false},
+                            { name: "John Funcall", paid: true } ];
+
+
+        function processPassengers( passengers, testFunction) {
+            for (var i = 0; i < passengers.length; i++) {
+                if (testFunction(passengers[i])) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function checkNoFlyList(passenger) {
+            return ()
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
